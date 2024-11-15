@@ -33,4 +33,12 @@ console.log(elementTagLiOlClassCompteMoi.length)
 
 //Question 7
 console.log("**********La page contient un seul élément <div>. Celui-ci contient 2 éléments <ul>. Dans le second <ul>, le premier élément de la liste (tag <li>) est caché visuellement de l'utilisateur mais toi, tu peux en récupérer le contenu. Affiche-le dans la console.");
-let elementTagDivTagUlSecondLi = document.querySelectorAll("div ul  ")
+console.log(document.querySelectorAll("div ul")[1].children[0].innerHTML)
+
+//Cheminement initial:  
+  // let elementTagDivTagUl = document.querySelectorAll("div ul")
+  // let elementsLi = elementTagDivTagUl[1]
+  // let elementLi = elementsLi.children[0]
+  // let elementLiContent = elementLi
+  // console.log(elementLiContent.innerHTML)
+
