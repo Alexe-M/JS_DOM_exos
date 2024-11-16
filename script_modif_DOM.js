@@ -130,4 +130,36 @@ function changeViewButtons() {
 changeViewButtons()
 
 
+//Modification n°8 - merci chaton
+console.log("********************Modification n-8")
 
+console.log("******************** Modification n-8");
+
+function moveThirdCard() {
+  // Étape 1 : Sélectionner la première div.row contenant les cards
+  // Cibler la row contenant les cards dans .album
+  let firstRow = document.querySelector(".album .row");
+  console.log("Première row (avec les cards) :", firstRow);
+
+  // Vérifier les enfants de cette row
+  console.log("Enfants de la première row :", firstRow.children);
+  
+  // Étape 2 : Créer une nouvelle div.row
+  let newRow = document.createElement("div");
+  newRow.classList.add("row"); // Ajouter la classe "row"
+  console.log("Nouvelle row créée : ", newRow);
+
+    // Étape 3 : Insérer la nouvelle row après la première
+  firstRow.insertAdjacentElement("afterend", newRow); // Insère après la première row
+  console.log("Nouvelle row insérée après la première row.");
+
+    // Étape 4 : Déplacer la troisième card vers la nouvelle row
+  let thirdCard = firstRow.querySelectorAll(".col-md-4")[2]; // La 3ème card (index 2)
+  console.log("Troisième card à déplacer : ", thirdCard);
+
+  newRow.appendChild(thirdCard); // Déplace la troisième card vers la nouvelle row
+  console.log("Troisième card déplacée dans la nouvelle row.");
+}
+moveThirdCard()
+
+  
